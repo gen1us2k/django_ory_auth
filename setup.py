@@ -1,9 +1,10 @@
 import setuptools
 
-readme = open('README.md').read()
+with open('README.md') as f:
+    readme = f.read()
 
 setuptools.setup(
-    name="django-ory",
+    name="ory_auth_django",
     version="0.0.1",
     author="Andrew Minkin",
     author_email="minkin.andrew@gmail.com",
@@ -12,9 +13,15 @@ setuptools.setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/gen1us2k/django-ory",
+    install_requires=[],
     classifiers=[
         'Programming Language :: Python :: 3',
-    ]
-    packages=setuptools.find_packages(where="src"),
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Framework :: Django :: 3.0',
+        'Framework :: Django :: 4',
+        'Framework :: Django CMS',
+    ],
+    packages=setuptools.find_packages(where="ory_auth"),
     python_requires=">=3.6",
 )
