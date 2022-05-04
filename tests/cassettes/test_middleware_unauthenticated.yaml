@@ -1,0 +1,34 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: http://127.0.0.1:4433/sessions/whoami
+  response:
+    body:
+      string: '{"error":{"code":401,"status":"Unauthorized","reason":"No valid session
+        cookie found.","message":"The request could not be authorized"}}
+
+        '
+    headers:
+      Content-Length:
+      - '137'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 04 May 2022 18:04:57 GMT
+      Vary:
+      - Origin
+      - Cookie
+    status:
+      code: 401
+      message: Unauthorized
+version: 1

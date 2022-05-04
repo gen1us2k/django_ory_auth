@@ -1,0 +1,37 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - ory_kratos_session=MTY1MTY3OTc5N3xEdi1CQkFFQ180SUFBUkFCRUFBQVJfLUNBQUVHYzNSeWFXNW5EQThBRFhObGMzTnBiMjVmZEc5clpXNEdjM1J5YVc1bkRDSUFJR3BrZDAxeVFVcGlTVWxYVVc1UmFtUTNWVTFXUlZSTVZHRjRkVkF3TVhseHzeW6gJiLTLfJGAYPe4Bk44r0WtQIuZLQexqo0ZmMjoFw==
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: http://127.0.0.1:4433/sessions/whoami
+  response:
+    body:
+      string: '{"id":"bcf99707-c8b2-4590-b2f1-7ef062e4c90c","active":true,"expires_at":"2022-05-05T15:56:37.399304Z","authenticated_at":"2022-05-04T15:56:37.424868Z","authenticator_assurance_level":"aal1","authentication_methods":[{"method":"password","completed_at":"2022-05-04T15:56:37.399947875Z"}],"issued_at":"2022-05-04T15:56:37.399304Z","identity":{"id":"e669049e-8a0a-4d7f-b0dd-b9e1f38cfcb8","schema_id":"default","schema_url":"http://127.0.0.1:4433/schemas/default","state":"active","state_changed_at":"2022-05-04T15:56:37.373973Z","traits":{"name":{"last":"Test","first":"Ory"},"email":"ory@example.com"},"verifiable_addresses":[{"id":"c3067f8a-21bb-4d01-a6bd-261a52ea0288","value":"ory@example.com","verified":false,"via":"email","status":"sent","created_at":"2022-05-04T15:56:37.387455Z","updated_at":"2022-05-04T15:56:37.387455Z"}],"recovery_addresses":[{"id":"9205a918-1fa7-419b-b3ba-cd76d8bd001e","value":"ory@example.com","via":"email","created_at":"2022-05-04T15:56:37.389717Z","updated_at":"2022-05-04T15:56:37.389717Z"}],"created_at":"2022-05-04T15:56:37.381521Z","updated_at":"2022-05-04T15:56:37.381521Z"}}
+
+        '
+    headers:
+      Content-Length:
+      - '1113'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 04 May 2022 18:04:57 GMT
+      Vary:
+      - Origin
+      - Cookie
+      X-Kratos-Authenticated-Identity-Id:
+      - e669049e-8a0a-4d7f-b0dd-b9e1f38cfcb8
+    status:
+      code: 200
+      message: OK
+version: 1
