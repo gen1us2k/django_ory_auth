@@ -3,6 +3,7 @@ import pytest
 from ory_auth.backend import OryBackend
 from django.test import RequestFactory
 
+@pytest.mark.vcr
 def test_unauthenticated(django_user_model):
     req = RequestFactory().get("/")
     user = OryBackend().authenticate(req)
