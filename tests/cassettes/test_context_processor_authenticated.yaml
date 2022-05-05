@@ -1,0 +1,75 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - ory_kratos_session=MTY1MTc3MzE0OXxEdi1CQkFFQ180SUFBUkFCRUFBQVJfLUNBQUVHYzNSeWFXNW5EQThBRFhObGMzTnBiMjVmZEc5clpXNEdjM1J5YVc1bkRDSUFJR2M1TUdwa1dWQnlZMEpRYURaWWIxQjNTbTEwV1VKM1pXa3hTR2c0WkROMXyM5gb29-mKbogcj_cY5Zv6O4hkhPuzd257XJO8qarKDQ==
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: http://127.0.0.1:4433/sessions/whoami
+  response:
+    body:
+      string: '{"id":"36630a57-ab7d-40af-8d6e-41d63ca1f544","active":true,"expires_at":"2022-05-06T17:52:29.966115Z","authenticated_at":"2022-05-05T17:52:29.966115Z","authenticator_assurance_level":"aal1","authentication_methods":[{"method":"password","completed_at":"2022-05-05T17:52:29.966105012Z"}],"issued_at":"2022-05-05T17:52:29.966115Z","identity":{"id":"948e2cf7-cd4b-47fb-99af-faef46612f95","schema_id":"default","schema_url":"http://127.0.0.1:4433/schemas/default","state":"active","state_changed_at":"2022-05-03T12:40:21.387872Z","traits":{"name":{"last":"Minkin","first":"Andrei"},"email":"minkin.andrew@gmail.com"},"verifiable_addresses":[{"id":"0d3f91f4-cce8-4459-ad6e-2e587307de06","value":"minkin.andrew@gmail.com","verified":false,"via":"email","status":"sent","created_at":"2022-05-03T12:40:21.398447Z","updated_at":"2022-05-03T12:40:21.398447Z"}],"recovery_addresses":[{"id":"14f1c28c-dfe2-43ba-976b-e9c8a19e6153","value":"minkin.andrew@gmail.com","via":"email","created_at":"2022-05-03T12:40:21.401611Z","updated_at":"2022-05-03T12:40:21.401611Z"}],"created_at":"2022-05-03T12:40:21.394285Z","updated_at":"2022-05-03T12:40:21.394285Z"}}
+
+        '
+    headers:
+      Content-Length:
+      - '1142'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 05 May 2022 17:53:13 GMT
+      Vary:
+      - Origin
+      - Cookie
+      X-Kratos-Authenticated-Identity-Id:
+      - 948e2cf7-cd4b-47fb-99af-faef46612f95
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - ory_kratos_session=MTY1MTc3MzE0OXxEdi1CQkFFQ180SUFBUkFCRUFBQVJfLUNBQUVHYzNSeWFXNW5EQThBRFhObGMzTnBiMjVmZEc5clpXNEdjM1J5YVc1bkRDSUFJR2M1TUdwa1dWQnlZMEpRYURaWWIxQjNTbTEwV1VKM1pXa3hTR2c0WkROMXyM5gb29-mKbogcj_cY5Zv6O4hkhPuzd257XJO8qarKDQ==
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: http://127.0.0.1:4433/self-service/logout/browser
+  response:
+    body:
+      string: '{"logout_url":"http://127.0.0.1:4433/self-service/logout?token=4EWguJ7ppTSUNm80o8YGEBKFWyc36AVY","logout_token":"4EWguJ7ppTSUNm80o8YGEBKFWyc36AVY"}
+
+        '
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Length:
+      - '148'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 05 May 2022 17:53:13 GMT
+      Set-Cookie:
+      - csrf_token_806060ca5bf70dff3caa0e5c860002aade9d470a5a4dce73bcfa7ba10778f481=h+IvnrHt3Wa/uE15yc74MBsA/1VvfSIxgNFujvRjRxg=;
+        Path=/; Max-Age=31536000; HttpOnly; SameSite=Lax
+      Vary:
+      - Origin
+      - Cookie
+    status:
+      code: 200
+      message: OK
+version: 1

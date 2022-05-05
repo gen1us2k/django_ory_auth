@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Cookie:
+      - ory_kratos_session=MTY1MTY3OTc5N3xEdi1CQkFFQ180SUFBUkFCRUFBQVJfLUNBQUVHYzNSeWFXNW5EQThBRFhObGMzTnBiMjVmZEc5clpXNEdjM1J5YVc1bkRDSUFJR3BrZDAxeVFVcGlTVWxYVVc1UmFtUTNWVTFXUlZSTVZHRjRkVkF3TVhseHzeW6gJiLTLfJGAYPe4Bk44r0WtQIuZLQexqo0ZmMjoFw==
+      User-Agent:
+      - python-requests/2.27.1
+    method: GET
+    uri: http://127.0.0.1:4433/sessions/whoami
+  response:
+    body:
+      string: '{"error":{"code":401,"status":"Unauthorized","reason":"No valid session
+        cookie found.","message":"The request could not be authorized"}}
+
+        '
+    headers:
+      Content-Length:
+      - '137'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 05 May 2022 17:51:38 GMT
+      Vary:
+      - Origin
+      - Cookie
+    status:
+      code: 401
+      message: Unauthorized
+version: 1
