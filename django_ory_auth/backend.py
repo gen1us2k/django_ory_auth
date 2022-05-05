@@ -11,7 +11,6 @@ HTTP_STATUS_UNAUTHORIZED = 401
 
 class OryBackend(BaseBackend):
     def authenticate(self, request):
-        print("HERE")
         sdk_url = config().get('ORY_SDK_URL')
         sess = requests.get(
             f"{sdk_url}/sessions/whoami",
