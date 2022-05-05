@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django_ory_auth"
-version = "0.1.0"
+version = "0.1.1"
 description = "A django package to enable integration with Ory Cloud"
 authors = ["Andrew Minkin <minkin.andrew@gmail.com>"]
 license = "Apache 2"

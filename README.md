@@ -4,7 +4,23 @@ This package provides integration with Ory Cloud or Ory Kratos for your django a
 
 ## Installing
 
-TBD
+You can simply run
+
+```
+   pip install django_ory_auth
+```
+
+or
+
+```
+   poetry add django_ory_auth
+```
+
+or
+
+```
+   pipenv install django_ory_auth
+```
 
 ## Configuration
 
