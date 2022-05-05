@@ -1,7 +1,7 @@
 import pytest
 from unittest import mock
 
-from ory_auth.middleware import AuthenticationMiddleware
+from django_ory_auth.middleware import AuthenticationMiddleware
 
 
 @pytest.mark.vcr

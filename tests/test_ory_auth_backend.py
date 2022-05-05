@@ -1,6 +1,6 @@
 import pytest
 
-from ory_auth.backend import OryBackend
+from django_ory_auth.backend import OryBackend
 
 @pytest.mark.vcr
 def test_unauthenticated(rf):

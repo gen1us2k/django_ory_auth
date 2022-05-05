@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "ory_auth"
+name = "django_ory_auth"
 version = "0.1.0"
 description = "A django package to enable integration with Ory Cloud"
 authors = ["Andrew Minkin <minkin.andrew@gmail.com>"]
 license = "Apache 2"
 packages = [
-    {include="ory_auth"}
+    {include="django_ory_auth"}
 ]
 readme = "README.md"
 keywords = ["django", "ory cloud", "auth"]
-repository = "https://github.com/gen1us2k/ory_auth"
+repository = "https://github.com/gen1us2k/django_ory_auth"
 classifiers=[
     'Programming Language :: Python :: 3',
     'Environment :: Web Environment',
