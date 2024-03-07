@@ -81,3 +81,18 @@ to enable context processor add `django_ory_auth.context.processor` to the `cont
 ## Optimisation
 
 This library will cache authentication requests and logout URLs if a [caching backend](https://docs.djangoproject.com/en/stable/ref/settings/#std-setting-CACHES) is enabled.
+
+To make sure caches get cleared on logout include urls:
+
+```
+import django_ory_auth.urls
+
+urlpatterns = [
+    ...
+    path("ory/", include(django_ory_auth.urls))
+]
+```
+
+In the Ory console, go to "Account experience" and set the right URL in the "Post-logout redirect" to e.g. `https://<your domain>/ory/_logout`
+
+Now when someone logs out, Ory will redirect to a view that clears the cached auth data in Django, and will then redirect them to the index page.
