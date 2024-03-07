@@ -80,4 +80,4 @@ to enable context processor add `django_ory_auth.context.processor` to the `cont
 
 ## Optimisation
 
-This library will cache authentication requests and logout URLs if a [caching backend](https://docs.djangoproject.com/en/5.0/ref/settings/#std-setting-CACHES) is enabled.
+This library will cache authentication requests and logout URLs if a [caching backend](https://docs.djangoproject.com/en/stable/ref/settings/#std-setting-CACHES) is enabled.
