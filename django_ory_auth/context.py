@@ -1,3 +1,5 @@
+from json import JSONDecodeError
+
 import requests
 from django.conf import settings
 
@@ -17,6 +19,10 @@ def processor(request):
             cookies=request.COOKIES
         )
 
-        context["logout_url"] = r.json().get('logout_url')
+        try:
+            context["logout_url"] = r.json().get('logout_url')
+        except JSONDecodeError:
+            # This will fail for local users, so don't bomb out
+            pass
     return context
 
