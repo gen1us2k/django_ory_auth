@@ -1,5 +1,3 @@
-from json import JSONDecodeError
-
 import requests
 from django.conf import settings
 
@@ -13,16 +11,15 @@ def processor(request):
         'verify_url': f"{settings.ORY_UI_URL}/verification",
         'profile_url': f"{settings.ORY_UI_URL}/settings",
     }
-    if request.user.is_authenticated:
+    # Only make this request for users authenticated via Ory. 
+    # Local users will have the email field set, but not users in Ory
+    if request.user.is_authenticated and not request.user.email:
         r = requests.get(
             f"{settings.ORY_SDK_URL}/self-service/logout/browser",
             cookies=request.COOKIES
         )
 
-        try:
-            context["logout_url"] = r.json().get('logout_url')
-        except JSONDecodeError:
-            # This will fail for local users, so don't bomb out
-            pass
+        context["logout_url"] = r.json().get('logout_url')
+
     return context
 
