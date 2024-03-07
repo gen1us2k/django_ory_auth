@@ -77,3 +77,7 @@ The package provides context processor to provide the following urls
 - profile_url (available for authenticated users)
 
 to enable context processor add `django_ory_auth.context.processor` to the `context_processor` setting
+
+## Optimisation
+
+This library will cache authentication requests and logout URLs if a [caching backend](https://docs.djangoproject.com/en/5.0/ref/settings/#std-setting-CACHES) is enabled.
