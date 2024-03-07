@@ -12,4 +12,4 @@ def logout(request):
     logout_cache_key = f"logout_{request.COOKIES.get('sessionid')}"
     cache.delete(logout_cache_key)
 
-    return redirect('logout_redirect_url_name')
+    return redirect('logout')
