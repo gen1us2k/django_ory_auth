@@ -1,6 +1,7 @@
 from django.core.cache import cache
 from django.shortcuts import redirect
 from django.contrib.auth import logout
+from django.conf import settings
 
 def logout(request):
     """
@@ -13,4 +14,4 @@ def logout(request):
     logout_cache_key = f"logout_{request.COOKIES.get('sessionid')}"
     cache.delete(logout_cache_key)
 
-    return redirect('/')
+    return redirect(settings.LOGOUT_REDIRECT_URL)
