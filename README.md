@@ -59,6 +59,7 @@ Last step is to add `django_ory_auth.middleware.AuthenticationMiddleware` under 
 
 MIDDLEWARE = [
     …
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django_ory_auth.middleware.AuthenticationMiddleware",
     ...
